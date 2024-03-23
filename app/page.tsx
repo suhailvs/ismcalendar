@@ -4,9 +4,10 @@ import React, { useState, useEffect, useMemo } from "react";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import events from './events';
 // const localizer = momentLocalizer(moment);
 export default function Home() {
-  const [events, setEvents] = useState([]);
+  // const [events, setEvents] = useState([]);
   const localizer = useMemo(() => momentLocalizer(moment), []);
   const handleCalendarNavigate = (date: Date) => {
     console.log("Month ----->>>", moment(date).format("MMMM YYYY"));
